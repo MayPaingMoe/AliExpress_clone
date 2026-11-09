@@ -1,0 +1,3420 @@
+<!-- concurrently \"npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch\" \"live-server src --open=responsive.html\"  -->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </head>
+  <body>
+    <div class="w-full bg-white">
+      <!-- Main and search bar -->
+      <!-- header -->
+
+      <header class="bg-white border-b border-gray-200">
+        <!-- Container -->
+        <div
+          class="container mx-auto flex items-center justify-between px-4 h-20 gap-4"
+        >
+          <a
+            href="#"
+            class="text-xl md:text-2xl font-bold tracking-tight text-black"
+            >AliExpress</a
+          >
+
+          <div
+            class="relative flex-1 max-w-xl flex items-center border-2 border-black rounded-full overflow-hidden"
+          >
+            <input
+              type="text"
+              name="search"
+              placeholder="Search"
+              class="w-full py-1.5 md:py-2 pl-4 pr-12 text-xs md:text-sm outline-none border-none bg-transparent"
+            />
+            <button
+              class="absolute right-1 bg-black text-white p-1.5 md:p-2 rounded-full flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="size-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="hidden lg:flex items-center gap-6 text-xs text-black">
+            <a href="#" class="hover:text-red-500 leading-tight">
+              Download the<br />AliExpress App
+            </a>
+
+            <a href="#" class="hover:text-red-500 font-medium"> 🇲🇲 EN/MMK </a>
+
+            <a href="#" class="hover:text-red-500"> Hi, Account </a>
+
+            <div class="bg-black grid-cols-2 w-20 h-20">              
+              <div class="bg-blue-600"></div>
+              <div class="bg-amber-700-"></div>
+            </div>
+          </div>
+
+          <div class="lg:hidden flex items-center">
+            <button class="text-black p-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="bg-white mt-5">
+        <!-- nav bar -->
+        <nav class="bg-white border-b border-gray-200">
+          <div
+            class="container mx-auto px-4 flex items-center justify-between text-sm font-medium h-12"
+          >
+            <!-- 1. All Categories -->
+            <div
+              class="flex items-center gap-2 cursor-pointer font-bold text-black hover:text-red-500 whitespace-nowrap pr-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <a href="#">All Categories</a>
+            </div>
+
+            <!-- 2. Nav Links -->
+            <div
+              class="flex items-center gap-5 whitespace-nowrap text-gray-700"
+            >
+              <a href="#" class="text-red-500 font-bold hover:underline"
+                >SuperDeals</a
+              >
+              <a href="#" class="hover:text-red-500">AliExpress Business</a>
+              <a href="#" class="hover:text-red-500 hidden md:inline"
+                >Arts, Crafts & Sewing</a
+              >
+              <a href="#" class="hover:text-red-500 hidden lg:inline"
+                >Home & Living</a
+              >
+              <a href="#" class="hover:text-red-500 hidden xl:inline"
+                >Tools & Home Improvement</a
+              >
+              <a href="#" class="hover:text-red-500 hidden xl:inline"
+                >Electronics</a
+              >
+              <a href="#" class="hover:text-red-500 hidden xl:inline"
+                >Bags & Luggage</a
+              >
+              <a href="#" class="hover:text-red-500 hidden xl:inline"
+                >Toys & Games</a
+              >
+
+              <!-- More Dropdown -->
+              <div class="relative inline-block group">
+                <button
+                  class="flex items-center gap-1 hover:text-red-500 py-1 outline-none font-medium"
+                >
+                  <span>More</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="size-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  class="absolute right-0 top-full mt-1 w-56 bg-white border border-gray-100 shadow-xl rounded-md opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50"
+                >
+                  <a
+                    href="#"
+                    class="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-red-500 xl:hidden"
+                    >Tools & Home Improvement</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-red-500 xl:hidden"
+                    >Electronics</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-red-500 lg:hidden"
+                    >Home & Living</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-red-500 md:hidden"
+                    >Arts, Crafts & Sewing</a
+                  >
+
+                  <a
+                    href="#"
+                    class="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-red-500 md:hidden"
+                    >Bags & Luggage</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-red-500 md:hidden"
+                    >Toys & Games</a
+                  >
+                   <a
+                    href="#"
+                    class="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-red-500"
+                    >Cell Phones & Accessories</a
+                  >
+                   <a
+                    href="#"
+                    class="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-red-500"
+                    >Automotive</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- promo bar -->
+        <div class="bg-[#fd384f] w-full">
+          <div class="container mx-auto py-10">
+            <div>
+              <p class="text-white text-xl font-bold font-serif">
+                Sale Ends:Nov 19, 14:29 (GMT+6.5)
+              </p>
+            </div>
+            <div class="">
+              <img src="/img/promo.gif" alt="promo" srcset="" class="w-250" />
+            </div>
+            <div class="flex gap-3">
+              <div class="bg-[#FFDBDB] w-90">
+                <div
+                  class="flex flex-col items-center justify-center text-center py-10"
+                >
+                  <div>
+                    <span
+                      class="text-[#F60046] text-2xl font-bold font-sans p-1"
+                      >8,400 K OFF</span
+                    >
+                  </div>
+                  <div>
+                    <span class="text-[#FA6690] text-xm font-bold font-sans p-1"
+                      >orders 53,000 K+</span
+                    >
+                  </div>
+                  <div>
+                    <span class="text-red-500 text-xm font-bold font-sans p-2"
+                      >Code:OTD11BD04</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="w-full grid grid-cols-4 gap-3">
+                <div class="bg-[#CAE1FF] grid grid-cols-2">
+                  <div class="bg-black">
+                    <img src="/img/img21.avif" alt="bag" />
+                  </div>
+                  <div class="h-40">
+                    <div
+                      class="text-[#005B82] text-2xl py-8 font-semibold px-2"
+                    >
+                      <p>Top deals</p>
+                    </div>
+                    <div class="font-serif px-2 py-3">
+                      <span class="text-2xl w-20 bg-[#7393B3]">103 K</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-[#FFE6C9] grid grid-cols-2">
+                  <div class="">
+                    <img src="/img/img17.avif" alt="hair" class="size-50" />
+                  </div>
+                  <div class="h-40">
+                    <div
+                      class="text-[#FF9999] text-2xl py-8 font-semibold px-2"
+                    >
+                      <p>Tech life</p>
+                    </div>
+                    <div class="font-serif px-2 py-3">
+                      <span class="text-2xl w-20 bg-[#7393B3]">23,482 K</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-end absolute top-30 right-40">
+              <img src="/img/img18.avif" alt="11.11" class="w-150 py-9" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- car bar -->
+      <div class="bg-gray-100">
+        <div
+          class="container mx-auto py-5 flex justify-center items-center space-x-3"
+        >
+          <div class="">
+            <img
+              src="https://ae-pic-a1.aliexpress-media.com/kf/S2fcb9f97d7c0485391fe9455dd7a7b24K/54x54.png"
+              alt="free car"
+              class="size-4"
+            />
+          </div>
+
+          <div class="text-[#4A0404] font-bold">
+            <p>Free shipping</p>
+          </div>
+
+          <div class="text-[#A52A2A]">On all Choice items</div>
+        </div>
+      </div>
+
+      <!-- today deal's bar -->
+
+      <div class="bg-white py-12">
+        <div class="container mx-auto px-4">
+          <!-- Title -->
+          <div class="text-center mb-6">
+            <h2 class="text-3xl font-bold">Today's deals</h2>
+          </div>
+
+          <!-- deal's bar Layout -->
+          <div
+            class="bg-white grid grid-cols-1 gap-4 p-4 border broder-1 hover:border-none md:grid-cols-3 hover:bg-gray-100 cursor-pointer group"
+          >
+            <!-- Super Deals -->
+            <div
+              class="col-span-1 bg-white text-white flex flex-col items-center justify-center h-96 gap-6 hover:bg-gray-100"
+            >
+              <h2 class="text-2xl font-extrabold text-black">SuperDeals</h2>
+
+              <span
+                class="text-black rounded-full px-4 py-2 bg-pink-200 group-hover:bg-white"
+              >
+                <img src="/img/downarrow.avif" alt="" class="inline w-5" />
+                Up to 80% off
+              </span>
+
+              <button
+                class="font-bold px-8 py-3 bg-black text-white hover:bg-white hover:text-black hover:font-bold hover:border-1"
+              >
+                Shop now
+              </button>
+            </div>
+
+            <!-- Carousel -->
+            <div class="col-span-2 min-w-0">
+              <div
+                id="controls-carousel"
+                class="relative w-full"
+                data-carousel="static"
+              >
+                <!-- Carousel Wrapper -->
+                <div class="relative h-96 overflow-hidden">
+                  <!-- Slide 1 : Product 1 - 4 -->
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item="active"
+                  >
+                    <div class="grid grid-cols-4 gap-3 h-full">
+                      <!-- Product 1 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/knittedfabric.avif"
+                          class="w-full h-48 object-contain"
+                        />
+
+                        <h3 class="text-sm font-medium line-clamp-2">
+                          Product 1
+                        </h3>
+
+                        <p class="font-bold mt-2">12,521 K</p>
+                        <p class="text-red-500">-56%</p>
+                      </div>
+
+                      <!-- Product 2 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/spring_summer.avif"
+                          class="w-full h-48 object-contain"
+                        />
+
+                        <h3 class="text-sm font-medium line-clamp-2">
+                          Product 2
+                        </h3>
+
+                        <p class="font-bold mt-2">24,376 K</p>
+                        <p class="text-red-500">-50%</p>
+                      </div>
+
+                      <!-- Product 3 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/cctv.avif"
+                          class="w-full h-48 object-contain"
+                        />
+
+                        <h3 class="text-sm font-medium line-clamp-2">
+                          Product 3
+                        </h3>
+
+                        <p class="font-bold mt-2">9,764 K</p>
+                        <p class="text-red-500">-57%</p>
+                      </div>
+
+                      <!-- Product 4 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/smart_glass.avif"
+                          class="w-full h-48 object-contain"
+                        />
+
+                        <h3 class="text-sm font-medium line-clamp-2">
+                          Product 4
+                        </h3>
+
+                        <p class="font-bold mt-2">13,118 K</p>
+                        <p class="text-red-500">-49%</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 : Product 5 - 8 -->
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <div class="grid grid-cols-4 gap-3 h-full">
+                      <!-- Product 5 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/acaan.avif"
+                          class="w-full h-48 object-contain"
+                        />
+                        <h3 class="text-sm font-medium">Product 5</h3>
+                        <p class="font-bold mt-2">12,116 K</p>
+                        <p class="text-red-500">-21%</p>
+                      </div>
+
+                      <!-- Product 6 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/socket.avif"
+                          class="w-full h-48 object-contain"
+                        />
+                        <h3 class="text-sm font-medium">Product 6</h3>
+                        <p class="font-bold mt-2">7,111 K</p>
+                        <p class="text-red-500">-44%</p>
+                      </div>
+
+                      <!-- Product 7 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/unicon_shirt.avif"
+                          class="w-full h-48 object-contain"
+                        />
+                        <h3 class="text-sm font-medium">Product 7</h3>
+                        <p class="font-bold mt-2">81,999 K</p>
+                        <p class="text-red-500">-34%</p>
+                      </div>
+
+                      <!-- Product 8 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/brace.avif"
+                          class="w-full h-48 object-contain"
+                        />
+                        <h3 class="text-sm font-medium">Product 8</h3>
+                        <p class="font-bold mt-2">129,875 K</p>
+                        <p class="text-red-500">-62%</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 : Product 9 - 12 -->
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <div class="grid grid-cols-4 gap-3 h-full">
+                      <!-- Product 9 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/bange.avif"
+                          class="w-full h-48 object-contain"
+                        />
+                        <h3 class="text-sm font-medium">Product 9</h3>
+                        <p class="font-bold mt-2">11,963 K</p>
+                        <p class="text-red-500">-53%</p>
+                      </div>
+
+                      <!-- Product 10 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/pajama.avif"
+                          class="w-full h-48 object-contain"
+                        />
+                        <h3 class="text-sm font-medium">Product 10</h3>
+                        <p class="font-bold mt-2">15,344 K</p>
+                        <p class="text-red-500">-54%</p>
+                      </div>
+
+                      <!-- Product 11 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/corei9.avif"
+                          class="w-full h-48 object-contain"
+                        />
+                        <h3 class="text-sm font-medium">Product 11</h3>
+                        <p class="font-bold mt-2">11,514 K</p>
+                        <p class="text-red-500">-56%</p>
+                      </div>
+
+                      <!-- Product 12 -->
+                      <div
+                        class="bg-white p-2 min-w-0 hover:scale-103 transition-all ease-in-out"
+                      >
+                        <img
+                          src="/img/dogrobot.avif"
+                          class="w-full h-48 object-contain"
+                        />
+                        <h3 class="text-sm font-medium">Product 12</h3>
+                        <p class="font-bold mt-2">18,689 K</p>
+                        <p class="text-red-500">-2%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Previous Button -->
+                <button
+                  type="button"
+                  class="absolute top-1/2 start-0 z-30 -translate-y-1/2 bg-black/50 p-3 text-white rounded-r-lg hover:bg-black"
+                  data-carousel-prev
+                >
+                  ❮
+                </button>
+
+                <!-- Next Button -->
+                <button
+                  type="button"
+                  class="absolute top-1/2 end-0 z-30 -translate-y-1/2 bg-black/50 p-3 text-white rounded-l-lg hover:bg-black"
+                  data-carousel-next
+                >
+                  ❯
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Super Buyer -->
+      <div class="bg-white">
+        <div class="container mx-auto px-4 bg-white">
+          <div class="cursor-pointer">
+            <div
+              class="relative container mx-auto bg-cover bg-center bg-no-repeat h-170"
+              style="background-image: url(&quot;/img/img20.avif&quot;)"
+            >
+              <div class="top-10 left-20 right-20 absolute">
+                <div class="grid grid-cols-2">
+                  <div class="container mx-5">
+                    <div class="py-5 w-60">
+                      <img
+                        src="/img/superbuyer.avif"
+                        alt="superbuyer"
+                        class="w-60"
+                      />
+                    </div>
+                    <div class="flex space-x-2 py-1">
+                      <div class="flex space-x-1">
+                        <img src="/img/tag.avif" alt="tag" class="w-5" />
+                        <div class="text-white">
+                          <span>Tax exemptions</span>
+                        </div>
+                      </div>
+                      <div class="flex space-x-1">
+                        <div>
+                          <img
+                            src="/img/express.avif"
+                            alt="express"
+                            class="w-6"
+                          />
+                        </div>
+                        <div>
+                          <span class="text-white">Express payment</span>
+                        </div>
+                      </div>
+                      <div class="flex space-x-1">
+                        <div>
+                          <img
+                            src="/img/financial.avif"
+                            alt="financial"
+                            class="w-5"
+                          />
+                        </div>
+                        <div>
+                          <span class="text-white">Financial support</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-5">
+                      <div
+                        class="bg-white w-30 h-10 flex items-center justify-center hover:bg-black hover:text-white hover:font-bold bg-white font-bold"
+                      >
+                        <span class=""> Shop now </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 5M+ -->
+                  <div class="">
+                    <div class="w-130 ml-auto grid grid-cols-2 space-y-5">
+                      <div>
+                        <div class="border-l-7 border-white px-2">
+                          <div class="flex flex-col">
+                            <span class="font-semibold text-white text-2xl"
+                              >5M+</span
+                            >
+                            <span class="font-semibold text-white"
+                              >Factory direct supply</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="border-l-7 border-white px-2">
+                          <div class="flex flex-col">
+                            <span class="font-semibold text-white text-2xl"
+                              >20M+</span
+                            >
+                            <span class="font-semibold text-white"
+                              >Value dropshipping items</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="border-l-7 border-white px-2">
+                          <div class="flex flex-col">
+                            <span class="font-semibold text-white text-2xl"
+                              >10</span
+                            >
+                            <span class="font-semibold text-white"
+                              >Local warehouses worldwide</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="border-l-7 border-white px-2">
+                          <div class="flex flex-col">
+                            <span class="font-semibold text-white text-2xl"
+                              >24H</span
+                            >
+                            <span class="font-semibold text-white"
+                              >Personalized sourcing service</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- bulk Saver Hub -->
+
+                <div class="h-90 w-full mt-10 grid grid-cols-2 gap-x-7">
+                  <div class="bg-white">
+                    <div class="text-2xl text-center py-2 font-bold">
+                      Bulk Saver Hub
+                    </div>
+                    <div class="grid grid-cols-3 px-5 gap-x-3">
+                      <div class="hover:scale-103 transition-all ease-in-out">
+                        <div class="">
+                          <img src="/img/fabric_roll.avif" alt="fabric_roll" />
+                        </div>
+                        <div class="mt-5">
+                          <div class="gap-x-5">
+                            <span class="text-2xl font-bold">11,654 K</span>
+                            <span class="line-through">12,578 K</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hover:scale-103 transition-all ease-in-out">
+                        <div>
+                          <img src="/img/indotd.avif" alt="fabric_roll" />
+                        </div>
+                        <div class="mt-5">
+                          <div class="gap-x-5">
+                            <span class="text-2xl font-bold">6,894 K</span>
+                            <span class="line-through">13,712 K</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hover:scale-103 transition-all ease-in-out">
+                        <div>
+                          <img src="/img/samsaung.avif" alt="fabric_roll" />
+                        </div>
+                        <div class="mt-5">
+                          <div class="gap-x-5">
+                            <span class="text-2xl font-bold">14,552 K</span>
+                            <span class="line-through">16,301 K</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-blue-300">
+                    <div class="text-2xl text-center py-2 font-bold">
+                      Buy again
+                    </div>
+                    <div class="grid grid-cols-3 px-5 gap-x-3">
+                      <div class="hover:scale-103 transition-all ease-in-out">
+                        <div class="">
+                          <img src="/img/hoodie.avif" alt="fabric_roll" />
+                        </div>
+                        <div class="mt-5">
+                          <div class="gap-x-5">
+                            <span class="text-2xl font-bold">17,702 K</span>
+                            <span class="line-through">19,403 K</span>
+                          </div>
+                          <div class="text-xs font-bold py-5">
+                            <span>Viewed before</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hover:scale-103 transition-all ease-in-out">
+                        <div>
+                          <img src="/img/greenglass.avif" alt="fabric_roll" />
+                        </div>
+                        <div class="mt-5">
+                          <div class="gap-x-5">
+                            <span class="text-2xl font-bold">10,114 K</span>
+                            <span class="line-through">23,737 K</span>
+                          </div>
+                          <div class="text-xs font-bold py-5">
+                            <span>Viewed before</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hover:scale-103 transition-all ease-in-out">
+                        <div>
+                          <img src="/img/img7.avif" alt="fabric_roll" />
+                        </div>
+                        <div class="mt-5">
+                          <div class="gap-x-5">
+                            <span class="text-2xl font-bold">12,227 K</span>
+                            <span class="line-through">25,757 K</span>
+                          </div>
+                          <div class="text-xs font-bold py-5">
+                            <span>Viewed before</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products bar -->
+
+      <div class="bg-white w-full h-full mt-10">
+        <div class="container mx-auto bg-white px-2">
+          <div class="text-center text-3xl font-bold py-5">
+            <span>More to Love</span>
+          </div>
+
+          <div class="grid grid-cols-6 gap-x-3 mt-2 bg-white">
+
+            <!-- card 1 -->
+            <div class="group relative hover:border border-gray-300 p-3 hover:cursor-pointer">
+              <div class="relative group ">
+                <img src="/img/velvet.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+              <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300 "
+              >
+                <button class="bg-black text-white px-2 py-2  border-1" type="button">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+             <!--  <div class="">
+                <img src="/img/skin_fabric.avif" alt="" />
+                
+                <img src="/img/freeshipping.avif" alt="" />
+              </div> -->
+              <div class="relative group ">
+                <img src="/img/skin_fabric.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >50x50cm 1mm Doll Skin Fabric Factory Special Skin Color
+                    Fabric Crystal Super Soft Short Plush Fabric DIY Handmade
+                    Cloth TJ9871</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>3,107.78K</span>
+                <span class="line-through">14,110.96K</span>
+                <span class="text-red-600">-77%</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.9</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">329 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">New Shoppers save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+              <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+              <!-- <div class="">
+                <img src="/img/reading_glasses.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/reading_glasses.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+             <!--  <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Rimless Reading Glasses Rhinestone Sparkling Eyewear
+                    Fashionable Elegant Eyeglasses Metal Frame with PC Lens
+                    Irregular Glasses</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+
+              <div>
+                <span>10,058.26K</span>
+              </div>
+              <div class="flex ">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.7</span>
+
+                <div class="border-l-2 px-1 flex">
+                  <span class="px-2">288 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 18,302 K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/red_tag.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-2xs"
+                  >Best price in similar deals</span
+                >
+              </div>
+              <div>
+                <span>Bundle deals</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+             <!--  <div >
+                <img src="/img/sewing.avif" alt="" />
+                <img src="/img/freeshipping.avif" alt="" class="w-full" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/sewing.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >New Sewing Machine Extension Table Sewing Machine Extension
+                    Table Extension Board</span
+                  >
+                </div>
+              </div> -->
+
+                 <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex">
+                <span>5,495.1K</span>
+                <span class="line-through">45,699.88K</span>
+                <span class="text-red-500 text-2xs">-87%</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.4</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">142 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">New shoppers save 40,205 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 5 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+              <!-- <div>
+                <img src="/img/backpack.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/backpack.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Self-Stowing Backpack Ultra Lightweight Foldable Packable
+                    Nylon Daypack Compact Collapsible Backpack For Hiking
+                    Camping Travel</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,693.5K</span>
+                <span class="line-through">34,116.58K</span>
+                <span class="text-red-500 text-2xs">-54%</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/hollowstar.avif" alt="" class="size-4 inline" />
+                <img src="/img/hollowstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">3</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">51 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/tag_1.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">6,050 K off on 30,000 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 6 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+              <!-- <div>
+                <img src="/img/solid_blanket.avif" alt="" />
+              </div> -->
+
+               <div class="relative group ">
+                <img src="/img/solid_blanket.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+              
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Solid Color Waffle Jacquard Blanket Multi-Functional
+                    Comfortable Cotton Velvet Blanket Nap Blanket for Home,
+                    Office, Sofa</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>16,491.99K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.7</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">66 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <div class="flex">
+                  <img src="/img/tag_1.avif" alt="" class="size-5 inline" />
+                  <p class="text-red-500 text-2xs">6,050 K off on 30,000 K</p>
+                </div>
+                <div class="flex">
+                  <img src="/img/downarrow.avif" alt="" class="size-5" />
+                  <span class="text-red-500 text-2xs">Save 20,000 K</span>
+                </div>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 7 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+             
+              <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/reading_glasses.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+             <!--  <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 8 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+              <!-- <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+               <div class="relative group ">
+                <img src="/img/sewing.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+            <!--   <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 9 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+             <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/reading_glasses.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 10 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+              <!-- <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+               <div class="relative group ">
+                <img src="/img/sewing.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 11 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+             <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/reading_glasses.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+             <!--  <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 12 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+             <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+               <div class="relative group ">
+                <img src="/img/sewing.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 13 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+             
+              <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/reading_glasses.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+             <!--  <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 14 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+              <!-- <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+               <div class="relative group ">
+                <img src="/img/sewing.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+            <!--   <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 15 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+             <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/reading_glasses.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 16 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+              <!-- <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+               <div class="relative group ">
+                <img src="/img/sewing.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 17 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+             <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/reading_glasses.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+             <!--  <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 18 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+             <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+               <div class="relative group ">
+                <img src="/img/sewing.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 19 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+             
+              <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/reading_glasses.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+             <!--  <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 20 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+              <!-- <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+               <div class="relative group ">
+                <img src="/img/sewing.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+            <!--   <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 21 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+             <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/reading_glasses.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 22 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+              <!-- <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+               <div class="relative group ">
+                <img src="/img/sewing.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 23 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+             <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+              <div class="relative group ">
+                <img src="/img/reading_glasses.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+              </div>
+
+             <!--  <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+            <!-- card 24 -->
+            <div class="group relative hover:border border-gray-300 p-3">
+
+             <!--  <div>
+                <img src="/img/velvet.avif" alt="" />
+              </div> -->
+
+               <div class="relative group ">
+                <img src="/img/sewing.avif" alt="" />
+
+                <div class="absolute top-43 right-5">
+                  <button class="bg-white rounded-full w-13 hover:bg-blue-300">
+                    <img src="/img/trolley.png" alt="" class="w-10" />
+                  </button>
+                </div>
+                <img src="/img/freeshipping.avif" alt="" />
+              </div>
+
+              <!-- <div class="flex">
+                <div>
+                  <img src="/img/choice.avif" alt="" class="w-10" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="w-10" />
+                </div>
+                <div class="">
+                  <span
+                    >Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For
+                    Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts
+                    Materials</span
+                  >
+                </div>
+              </div> -->
+
+               <div class="flex gap-x-0.5">
+                <div >
+                  <img src="/img/choice.avif" alt="" class="mt-2" />
+                </div>
+                <div>
+                  <img src="/img/1111sale.avif" alt="" class="mt-2" />
+                </div>
+                <div class="w-50 px-0.5">
+                  <p
+                    class="truncate text-md"
+                    title="Velvet Touch Stripe Corduroy Fabric Solid Color 1x1.5m For Sewing Women Girl Dress Romper Jacket Autumn Apparel Crafts Materials"
+                  >
+                    Velvet Touch Stripe ...
+                  </p>
+                </div>
+              </div>
+
+
+              <div>
+                <span>15,775.72K</span>
+              </div>
+              <div class="flex">
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/star.avif" alt="" class="size-4 inline" />
+                <img src="/img/halfstar.avif" alt="" class="size-4 inline" />
+
+                <span class="px-2">4.8</span>
+
+                <div class="border-l-2 px-1">
+                  <span class="px-2">455 solde</span>
+                </div>
+              </div>
+              <div class="flex">
+                <img src="/img/downarrow.avif" alt="" class="size-5" />
+                <span class="text-red-500 text-xs">Save 22,318 K</span>
+              </div>
+              <div>
+                <span>Free shipping</span>
+              </div>
+
+               <!-- hover button -->
+              <div
+                class="absolute bottom-3 left-0 w-full opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <button class="bg-black text-white px-2 py-2  border-1">
+                  See preview
+                </button>
+                <button class="bg-white text-black px-2 py-2 border-1">
+                  Similar Items
+                </button>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="mt-5 container mx-auto">
+        <div class="text-center">
+          <span class="text-3xl font-semibold">More to love</span>
+        </div>
+        <div class="font-bold mt-3">
+          AliExpress: Your Best Choice for Online Shopping
+        </div>
+
+        <!-- text -->
+        <!-- <div class="max-h-28 overflow-hidden transition-all duration-500" id="read_more"> -->
+
+        <div
+          class="max-h-28 overflow-hidden transition-all duration-500"
+          id="read_more"
+        >
+          <!-- 1st para -->
+          <div class="mt-5">
+            <div class="font-bold">What is AliExpress?</div>
+            <p class="mt-3 text-xs font-light">
+              AliExpress is an international B to C cross-border electronic
+              commerce platform under the Alibaba group. For more in-depth
+              insights, explore the AliExpress Blog. Welcome to AliExpress, the
+              premier international marketplace and one-stop web site for
+              finding virtually any product you can imagine. Our platform is
+              designed to connect you directly with a global network of
+              suppliers and manufacturers. For entrepreneurs, we are a leading
+              wholesale market. Discover wholesale products, source wholesale
+              clothing, and connect directly with clothing manufacturers for
+              your business. Our wholesale website makes it easy to find clothes
+              wholesale from trusted wholesale suppliers. You can even hire a
+              dedicated sourcing agent to streamline your procurement. Explore
+              our vast catalog for personal use, whether you're outfitting your
+              kitchen, upgrading your lounge with new decor, or looking for an
+              electric bike. You'll find everything from the practical to the
+              quirky, like a handy alien space saver or even a novelty sign that
+              says "dog for sale." Placing an order is seamless. Our secure
+              payment system accepts your credit card, and we even offer a pay
+              later option in select regions. Before you check out, be sure to
+              apply a promo code or a color code for extra savings. We regularly
+              offer a coupon code and other special codes to make our prices
+              even better. We ship to customers around the globe, from bustling
+              cities to quiet towns like Long Beach. Our global shipping service
+              (or livraison, as it's known in France) offers clear shipping
+              prices and multiple options, including our popular selection
+              standard. Once your item is dispatched, you can follow its journey
+              with our package tracking system. We believe in transparency. Read
+              authentic customer reviews and feel free to look up any com site
+              review to see what people are saying. If you need help, our
+              contact number is available for support. While you might look for
+              like sites or browse similar pages, you'll find our combination of
+              variety and value is unmatched by other alternative sites or type
+              sites. Join a buying group to unlock even better deals, or become
+              a partner through our affiliate program.
+            </p>
+          </div>
+
+          <!-- 2nd para -->
+          <div class="mt-5">
+            <div class="font-bold mt-3">
+              AliExpress: Discover Endless Shopping Surprises
+            </div>
+            <p class="mt-3 text-xs font-light">
+              AliExpress is renowned for its extensive and diverse product
+              offerings, delivering delightful consumer experiences. More than
+              just a store, we are a dynamic international market connecting you
+              with millions of products directly from the source. Our
+              recognizable logo represents a bridge between you and a vast
+              network of China suppliers, ensuring you can find exactly what you
+              need. Our catalog is immense. Are you a DIY enthusiast? We have
+              everything for your projects, from a simple 12 inch ruler for
+              precise measurements to a longer 15 inch ruler for bigger tasks.
+              For your electrical work, find every size of tubing you could
+              need, including 1 2 heat shrink tubing, 1/4 shrink tube, 3 4 heat
+              shrink tubing, 3 8 heat shrink tubing, and heavy-duty 4 1 heat
+              shrink tubing. We even carry specialty items like adhesive shrink
+              tubing and 90 degree elbow pvc. Power your devices with a 3.6 volt
+              lithium battery or find a specific component that reads 3bar
+              pressure. You can even find practical solutions like adhesive for
+              shoe sole repair. Setting up a home cinema? Choose from a 100
+              projector screen, a classic 100 inch projector screen, a larger
+              120 inch projector screen, or go for the ultimate experience with
+              a 150 inch projector screen. Our selection of auto parts is
+              extensive, and you can even find a new backyard grill for summer
+              cookouts. We cater to every lifestyle. Discover an affordable
+              drawing tablet for your creative pursuits, an affordable
+              waterproof camera for your travels, or wellness products like an
+              acupressure band. For personal grooming, find an affordable beard
+              trimmer, products for 2c hair men, or the tool for that perfect
+              180 degree haircut. Rejuvenate your skincare routine with an
+              affordable retinol. Looking for a laugh? We have the perfect 50th
+              birthday gag gift and hilarious 60th birthday gag gifts. Stay
+              hydrated with a massive 3.7 liter water bottle. Originating from
+              China, we are a Chinese company proud to serve the world. We offer
+              seamless delivery to countries like India, Canada, Iran and all
+              across America. Whether you're an American shopper in boston or a
+              traveler needing an adapter greece or an adapter plug for Spain,
+              we've got you covered. Get the best price on any item, from a
+              single purchase to a wholesale order, directly from a trusted
+              supplier. On every product, you can find a great sale. Download
+              our app or use the website login to explore a world of
+              possibilities.
+            </p>
+          </div>
+
+          <!-- 3rd para -->
+          <div class="mt-5">
+            <div class="font-bold mt-3">
+              AliExpress: Your Source for Everything
+            </div>
+            <p class="mt-3 text-xs font-light">
+              We are one of the world's leading Chinese online shopping
+              websites, your ultimate destination for discovery and deals. We
+              connect you with a universe of products for every aspect of your
+              life. For the DIY enthusiast and home improver, our selection is
+              unparalleled. Tackle your bathroom renovation with a sleek
+              frameless shower door and a highly bathroom mat water absorbent.
+              Find the right tool for any job, from a precise angle ruler and
+              professional caulk guns to the perfect glue for metal and plastic.
+              We carry every type of adhesive, including versatile double sided
+              adhesive tape, heavy-duty automotive double sided tape, and
+              specific double sided tape for cars. Keep your clothes looking
+              fresh with a powerful lint shaver. Upgrade your personal care
+              routine with our extensive range of grooming tools. Find the best
+              affordable beard trimmer or a convenient beard trimmer with
+              vacuum. We have specialized tools like a ball trimmer, a gentle
+              female nose hair trimmer, and a high-tech ear wax removal tool
+              with camera. Download the companion app for endoscope camera for a
+              clear view. For hair styling, we offer everything from beginner
+              barber clippers and precision hair clippers for fading to a unique
+              barber clippers drawing tool for artistic styles, and even a
+              quality hairpiece for men. For your pets, find a quiet cat hair
+              trimmer or sturdy dog toenail clippers. Manage foot care easily
+              with electric toenail clippers and improve your wellness with a
+              dental irrigator or a relaxing deep tissue massager. Explore
+              hobbies and technology for every interest. Get started with a new
+              craft using a beginner scrapbooking kit or learn a new instrument
+              with a beginner harmonica. Outdoor enthusiasts will love our bird
+              watching monocular (monocular bird watching) and a reliable
+              hunting walkie talkie. Stay connected with a classic handy talkie.
+              Capture life's moments with top camcorder brands or set up a home
+              theater with an auto projector screen. Upgrade your car's tech
+              with a carplay adapter. Stay cool with a modern bladless fan or a
+              wearable neck cooler fan. Even our everyday items are fun, like
+              our color-changing led pencils. Discover unique treasures and
+              practical gadgets you won't find anywhere else. Find hilarious gag
+              gifts for men, charming antique plush toys, and even specialty
+              items sourced directly from regions like bangladesh toys. Protect
+              your flock with a sturdy bear proof chicken coop. Equip your
+              kitchen with a portable induction cooktop or seal goods with a
+              commercial band sealer. Be prepared for anything with a handy
+              keyring knife and a bright keyring torch. And for presentations or
+              play, we have the perfect laser pointer. For entrepreneurs, we are
+              a key resource. Find your next winning item to dropship by
+              partnering with our network of American dropship suppliers.
+            </p>
+          </div>
+
+          <!-- 4th para -->
+          <div class="mt-5">
+            <div class="font-bold mt-3">
+              AliExpress: The Ultimate China Shopping App & Online Store
+            </div>
+            <p class="mt-3 text-xs font-light">
+              Welcome to AliExpress, one of the world's leading Chinese
+              ecommerce sites and your premier China online store. We make it
+              easy to buy online China, connecting you to a universe of
+              products. Download our China shopping app to start exploring. Our
+              catalog is vast and varied. For home and auto needs, enhance your
+              vehicle with a practical car seat gap filler or a modern wireless
+              carplay adapter. You can even find vendors and get quotes for your
+              car toys stereo installation cost. Upgrade your home with a
+              quick-drying bath mat, find cheap bath towels in bulk from top
+              towel brands, and improve your air quality with a new humidifier.
+              For your DIY projects, find your favorite screwdriver brand, buy a
+              bulk caulk gun, grab some cable ties silicone, or buy heat shrink
+              for your electrical work. Create an immersive viewing experience
+              with a bezel free kit. Discover an incredible selection of
+              personal care items. Achieve a perfect haircut with pro barber
+              clippers or keep your knitwear looking new with a sweater shaver.
+              For foot care, we have the best rated toenail clippers, specially
+              designed toe nail clippers for thick toenails, and oversized big
+              toenail clippers. Elevate your dental routine with a portable oral
+              irrigator, the latest water flosser 2024, or a cheap water
+              flosser. Protect your skin with sunscreen or find support with a
+              cervical collar neck brace. Explore a world of high-tech gadgets
+              and hobbies. See the stars with top telescope brands or see in the
+              dark with a thermal monocular. We have professional tools like a
+              borescope inspection camera and a thermal camera for home
+              inspections. Find a reliable walkie talkie brand or source
+              directly from camera wholesalers. You can even find quirky tools
+              like a cell phone ruler. From party supplies to unique fashion, we
+              have it all. Get ready for fun with bulk squirt guns, cheap water
+              guns, and bulk sports water bottles. Host an outdoor movie night
+              with a blow up projector screen or decorate for the holidays with
+              a blow up turkey decoration. We are a leading China shoes supplier
+              and can even arrange for a delicate China doll delivery. Find
+              unique fashion like alt clothing, clever accessories like bra
+              holsters for women, and a safe bpa free phone case. Discover adult
+              novelties like rose toys or a collectible Chinese coin with square
+              hole. You can even stock up on essentials like bulk dental floss.
+              We are committed to providing a seamless shopping experience for
+              consumers worldwide, ensuring that you can enjoy quality services
+              and products no matter where you are. Choose AliExpress and let us
+              enhance your shopping journey with greater convenience and
+              delightful surprises.
+            </p>
+          </div>
+        </div>
+        <!-- view more block -->
+        <div
+          class="max-h-8 overflow-hidden transition-all duration-1000"
+          id="read_more_two"
+        >
+          <div class="mt-5 font-bold text-xs">
+            <span>View more <a href="">Blog</a></span> |
+            <span><a href="">ahegao hoodie</a></span>
+            <span><a href="">chromebook charger</a></span> |
+            <span><a href="">ps2 controller</a></span> |
+            <span><a href="">purge mask</a></span> |
+            <span><a href="">renaissance dress</a></span> |
+            <span><a href="">diamond tester</a></span> |
+            <span><a href="">gatsby dress</a></span> |
+            <span><a href="">hoverboard charger</a></span> |
+            <span><a href="">inflatable tent</a></span> |
+            <span><a href="">jade bracelet</a></span> |
+            <span><a href="">kuromi plush</a></span> |
+            <span><a href="">studded belt</a></span> |
+            <span><a href="">nvidia geforce gtx 780m</a></span> |
+            <span><a href="">red quinceanera dresses</a></span> |
+            <span><a href="">ryobi 40v battery</a></span> |
+            <span><a href="">thermal phone case</a></span> |
+            <span><a href="">action camera head mount</a></span> |
+            <span><a href="">elsa costume</a></span> |
+            <span><a href="">galaxy projector</a></span> |
+            <span><a href="">huggy wuggy costume</a></span> |
+            <span><a href="">lego piece 98989</a></span> |
+            <span><a href="">rosewe dresses</a></span> |
+            <span><a href="">shiesty mask</a></span> |
+            <span><a href="">tutu skirt</a></span> |
+            <span><a href="">2tb ssd</a></span> |
+            <span><a href="">cool lighters</a></span> |
+            <span><a href="">kids makeup</a></span> |
+            <span><a href="">omie lunch box</a></span> |
+            <span><a href="">polygel</a></span> |
+            <span><a href="">sneaker slippers</a></span> |
+            <span><a href="">spiderman toys</a></span> |
+            <span><a href="">cute hoodies</a></span> |
+            <span><a href="">freddy krueger costume</a></span> |
+            <span><a href="">hardshell phone cases</a></span> |
+            <span><a href="">nvidia geforce rtx 2060 mobile</a></span> |
+            <span><a href="">s8 plus cardholder cases</a></span> |
+            <span><a href="">scream mask</a></span> |
+            <span><a href="">velma costume</a></span> |
+            <span><a href="">white long sleeve dress</a></span> |
+            <span><a href="">Pic Copilot</a></span>
+          </div>
+        </div>
+        <div class="flex justify-center mt-3">
+          <button
+            onclick="toggleText()"
+            class="flex items-center justify-center"
+          >
+            <img
+              src="/img/downbuttonarrow.avif"
+              alt="Show more"
+              id="arrow"
+              class="w-10 h-10 transition-transform duration-300"
+            />
+          </button>
+        </div>
+
+        <!-- grid bar -->
+        <div class="grid grid-cols-5 mt-10">
+          <div class="">
+            <h3 class="font-bold text-xl mb-2">Customer service</h3>
+            <ul class="font-light space-y-2">
+              <li><a href="">Help Center</a></li>
+              <li>
+                <a href=""
+                  >Transaction Services Agreement for non-EU/UK Consumers</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  >Terms and Conditions for EU/EEA/UK Consumers
+                  (Transactions)</a
+                >
+              </li>
+              <li><a href="">Take our feedback survey</a></li>
+            </ul>
+            <div></div>
+          </div>
+          <div class="">
+            <div class="font-bold text-xl mb-2">Shopping with us</div>
+            <ul class="font-light space-y-2">
+              <li><a href="">Making payments</a></li>
+              <li><a href="">Delivery options</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <div class="font-bold text-xl mb-2">Collaborate with us</div>
+            <ul class="font-light space-y-2">
+              <li><a href="">Partnerships</a></li>
+              <li><a href="">Affiliate program</a></li>
+              <li><a href="">DS Center</a></li>
+              <li><a href="">Seller Log In</a></li>
+              <li><a href="">中国卖家入驻</a></li>
+              <li><a href="">Non-Chinese Seller Registration</a></li>
+              <li><a href="">Become a payment partner with us</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <h4 class="font-bold text-xl mb-2">Pay with</h4>
+            <div class="flex space-x-1.5 px-3">
+              <span><img src="/img/visacard.avif" alt="" class="" /></span>
+              <span><img src="/img/mastercard.avif" alt="" /></span>
+              <span><img src="/img/unionpay.avif" alt="" /></span>
+              <span><img src="/img/ucb.avif" alt="" /></span>
+              <span><img src="/img/americanexpress.avif" alt="" /></span>
+            </div>
+          </div>
+          <div class="">
+            <h4 class="font-bold mb-2 text-xl">Stay Connected</h4>
+            <div class="flex px-3 space-x-4">
+              <span
+                ><a href=""
+                  ><img src="/img/facebook.png" alt="" class="size-10" /></a
+              ></span>
+              <span>
+                <a href=""
+                  ><img src="/img/twitter.png" alt="" class="size-10" /></a
+              ></span>
+              <span
+                ><a href=""
+                  ><img src="/img/instagram.png" alt="" class="size-10" /></a
+              ></span>
+              <span
+                ><a href=""
+                  ><img src="/img/messenger.png" alt="" class="size-10" /></a
+              ></span>
+              <span
+                ><a href=""
+                  ><img src="/img/phone.png" alt="" class="size-10" /></a
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Help bar -->
+        <div class="grid grid-cols-2 mt-10 gap-x-15">
+          <div class="">
+            <div class="mb-5">
+              <h4 class="font-bold mt-4">Help</h4>
+              <div class="mt-5 text-md font-light">
+                <span><a href="">Help Center</a></span
+                >, <span><a href="">Disputes & Reports</a></span
+                >, <span><a href="">Return&refund policy</a></span
+                >, <span><a href="">Report IPR infringement</a></span
+                >, <span><a href="">DSA/OSA Information</a></span
+                >,
+                <span><a href="">Information and contacts for Brazil</a></span
+                >, <span><a href="">Integrity Compliance</a></span
+                >, <span><a href="">Transparency Center</a></span
+                >,
+                <span><a href="">Submit report (non-registered users)</a></span
+                >,
+                <span><a href=""></a>Return Policy</span>
+              </div>
+            </div>
+
+            <div class=" ">
+              <h4 class="font-bold mt-4">Browse by Category</h4>
+              <div class="mt-5 text-md font-light">
+                <span><a href="">All Popular</a></span
+                >, <span><a href="">Product</a></span
+                >, <span><a href="">Promotion</a></span
+                >, <span><a href="">Low Price</a></span
+                >, <span><a href="">Great Value</a></span
+                >, <span><a href="">Reviews</a></span
+                >, <span><a href="">Wiki</a></span
+                >, <span><a href="">Blog</a></span
+                >, <span><a href="">Video</a></span
+                >,
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="mb-5">
+              <h4 class="font-bold mt-4">AliExpress Multi-Language Sites</h4>
+              <div class="mt-5 text-md font-light">
+                <span><a href="">Russian</a></span
+                >, <span><a href="">Portuguese</a></span
+                >, <span><a href="">Spanish</a></span
+                >, <span><a href="">French</a></span
+                >, <span><a href="">German</a></span
+                >, <span><a href="">Italian</a></span
+                >, <span><a href="">Dutch</a></span
+                >, <span><a href="">Turkish</a></span
+                >,
+                <span><a href=""></a>Japanese</span>
+                <span><a href=""></a>Korean</span>
+                <span><a href=""></a>Thai</span>
+                <span><a href=""></a>Arabic</span>
+                <span><a href=""></a>Hebrew</span>
+                <span><a href=""></a>Polish</span>
+              </div>
+            </div>
+
+            <div class=" ">
+              <h4 class="font-bold mt-4">Alibaba Group</h4>
+              <div class="mt-5 text-md font-light">
+                <span><a href="">Alibaba Group Website</a></span
+                >, <span><a href="">AliExpress</a></span
+                >, <span><a href="">Alimama</a></span
+                >, <span><a href="">Fliggy</a></span
+                >, <span><a href="">Alibaba Cloud</a></span
+                >, <span><a href="">Alibaba International</a></span
+                >, <span><a href="">AliTelecom</a></span
+                >, <span><a href="">DingTalk</a></span
+                >, <span><a href="">Juhuasuan</a></span
+                >, <span><a href="">Taobao Marketplace</a></span
+                >, <span><a href="">Tmall</a></span
+                >, <span><a href="">Taobao Global</a></span
+                >, <span><a href="">AliOS</a></span
+                >, <span><a href="">1688</a></span
+                >,
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer copywrite -->
+      <div class="bg-black mt-5 text-white py-4">
+        <div
+          class="container mx-auto text-md flex flex-wrap items-center gap-x-2 gap-y-3"
+        >
+          <span><a href="">Intellectual Property Protection</a></span> -
+          <span><a href="">Privacy Policy</a></span> -
+          <span><a href="">Sitemap</a></span> -
+          <span><a href="">Terms of Use</a></span> -
+          <span><a href="">Information for EU consumers</a></span> -
+          <span class="font-bold">
+            <a href="">Legal Information / Imprint</a>
+          </span>
+          -
+          <span
+            ><a href=""
+              >Transaction Services Agreement for non-EU/UK Consumers</a
+            ></span
+          >
+          - <span><a href="">User Information Legal Enquiry Guide</a></span> -
+
+          <span>© 2010-2025 AliExpress.com. All rights reserved.</span>
+
+          <span>
+            <img src="/img/chineselogo.avif" alt="" class="w-5 inline" />
+          </span>
+
+          <span>
+            <a href="">增值电信业务经营许可证 浙B2-20120091-8</a>
+          </span>
+
+          <span>
+            <a href="">
+              <img src="/img/chineselogo2.avif" alt="" class="w-5 inline" />
+            </a>
+          </span>
+
+          <span><a href="">浙公网安备33010802014622号</a></span>
+
+          <span><a href="">浙ICP备2024067534号-11</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!--  </div>
+    </div> -->
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <script>
+      function toggleText() {
+        const content = document.getElementById("read_more");
+        const content_two = document.getElementById("read_more_two");
+
+        console.log("herre", content_two.innerHTML);
+
+        const arrow = document.getElementById("arrow");
+
+        /* second */
+        if (content_two.classList.contains("overflow-hidden")) {
+          content_two.classList.replace("overflow-hidden", "overflow-visiable");
+        } else {
+          content_two.classList.replace("overflow-visiable", "overflow-hidden");
+        }
+
+        /* first */
+
+        if (content.classList.contains("max-h-28")) {
+          content.classList.replace("max-h-28", "max-h-[2000px]");
+
+          arrow.style.transform = "rotate(180deg)";
+        } else {
+          content.classList.replace("max-h-[2000px]", "max-h-28");
+
+          arrow.style.transform = "rotate(0deg)";
+        }
+      }
+    </script>
+  </body>
+</html>
