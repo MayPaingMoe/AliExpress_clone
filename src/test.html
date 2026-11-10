@@ -1,15 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+<!-- concurrently \"npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch\" \"live-server src --open=responsive.html\"  -->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </head>
 <body>
   
         
 
+<div class="relative inline-block group">
+
+  <!-- Hover Area -->
+  <div class="inline-flex items-center gap-1 cursor-pointer text-black px-3 py-2 hover:text-red-500">
+    Hi, Mie
+    <svg class="w-4 h-4 transition-transform group-hover:rotate-180"
+      fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="2" d="m19 9-7 7-7-7" />
+    </svg>
+  </div>
+
+  <!-- Dropdown Menu -->
+  <div class="absolute right-0 top-full z-50 hidden group-hover:block bg-white border border-gray-200 rounded-lg shadow-lg w-72">
+
+    <div class="p-3">
+      <div class="flex items-center gap-2 p-2 bg-gray-100 rounded-lg">
+        <img class="w-10 h-10 rounded-full"
+          src="/docs/images/people/profile-picture-5.jpg" alt="">
+
+        <div class="text-sm">
+          <div class="font-semibold">Bonnie Green</div>
+          <div class="text-gray-500">name@flowbite.com</div>
+        </div>
+
+        <span class="ml-auto bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">PRO</span>
+      </div>
+    </div>
+
+    <ul class="px-2 pb-2 text-sm">
+
+      <li><a href="#" class="block p-2 rounded hover:bg-gray-100">Account</a></li>
+
+      <li><a href="#" class="block p-2 rounded hover:bg-gray-100">Settings</a></li>
+
+      <li><a href="#" class="block p-2 rounded hover:bg-gray-100">Privacy</a></li>
+
+      <li><a href="#" class="block p-2 rounded hover:bg-gray-100">Notifications</a></li>
+
+      <li><a href="#" class="block p-2 rounded hover:bg-gray-100">Help center</a></li>
+
+      <li><a href="#" class="block p-2 rounded hover:bg-gray-100">Dark mode</a></li>
+
+      <li class="border-t mt-2 pt-2">
+        <a href="#" class="block p-2 rounded hover:bg-gray-100">Upgrade to PRO</a>
+      </li>
+
+      <li><a href="#" class="block p-2 rounded text-red-500 hover:bg-gray-100">Sign out</a></li>
+
+    </ul>
+  </div>
+</div>
+
         
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
 </body>
 </html>

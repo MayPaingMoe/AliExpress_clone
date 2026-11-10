@@ -1,0 +1,123 @@
+      <header class="bg-white border-b border-gray-200">
+        <!-- Container -->
+         
+        <div
+          class="container mx-auto flex items-center justify-between px-4 h-20 gap-4"
+        >
+          <a
+            href="#"
+            class="text-xl md:text-2xl font-bold tracking-tight text-black"
+            >AliExpress</a
+          >
+
+          <div
+            class="relative flex-1 max-w-xl flex items-center border-2 border-black rounded-full"
+          >
+            <input
+              type="text"
+              name="search"
+              placeholder="Search"
+              class="w-full py-1.5 md:py-2 pl-4 pr-12 text-xs md:text-sm outline-none border-none bg-transparent"
+            />
+
+            <!-- Search Hover -->
+            <div class="relative group shrink-0">
+              <a href="#" class="block cursor-pointer">
+                <img src="/img/search.avif" alt="Search" class="pr-9 w-15" />
+              </a>
+
+              <!-- Hover Box -->
+              <div
+                class="absolute right-0 top-full z-50 hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-lg w-72 min-h-40 p-4"
+              >
+                <div class="flex justify-between">
+                  <div><h3 class="font-bold">Search by Image</h3></div>
+                  <div class="text-red-500 text-md cursor-pointer">X</div>
+                </div>               
+                <p class="font-light text-2xs">Find what you love with better prices on AliExpress by using an image search</p>
+                <div class="border border-dotted bg-gray-200 borderred">
+                    <div class="flex items-center justify-center">
+                      <img src="/img/freeimg.avif" alt="">
+                    </div>
+                    <div class="text-2xs flex items-center justify-center">Drag an image here</div>
+                    <div class="text-2xs font-light flex items-center justify-center">or</div>
+
+                    <div class="flex items-center justify-center mb-0.5">
+                     <label for="upload" class="cursor-pointer bg-red-400 rounded-full">Upload a Photo</label>
+                     <input type="file" name="up" id="upload" accept="image" class="hidden">
+                    </div>
+                </div>
+                <p class="text-2xs">*For a quick search hit CTRL+V to paste an image into the search box</p>
+              </div>
+            </div>
+
+            <button
+              class="absolute right-1 bg-black text-white p-1.5 md:p-2 rounded-full flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="size-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="hidden lg:flex items-center gap-6 text-xs text-black">
+
+            <div>
+              <a href="#" class="hover:text-red-500 leading-tight">
+              <img src="/img/apps.png" alt="" class="size-5 inline">
+              Download the<br />AliExpress App
+            </a>
+
+            <div>
+
+            </div>
+            </div>
+
+            <a href="#" class="hover:text-red-500 font-medium"> 🇲🇲 EN/MMK </a>
+
+            <a href="#" class="hover:text-red-500"> Hi, Account </a>
+
+            <div class="grid-cols-2 flex gap-x-1 mt-6.5">
+              <div class="w-7 h-17 mt-3">
+                <img src="/img/trolley.png" alt="" />
+              </div>
+              <div class="">
+                <button class="bg-black rounded-2xl size-9">
+                  <p class="text-white">0</p></button
+                ><br />
+                <span class="text-md font-light">Cart</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:hidden flex items-center">
+            <button class="text-black p-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
